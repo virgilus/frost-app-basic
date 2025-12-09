@@ -5,9 +5,18 @@ import streamlit as st
 import func as f
 import config as c
 
+from download_data import download_data
+from download_raw_data import download_raw_data
+from prepare_raw_data import prepare_raw_data
+
 # Configuration
 start_year = c.START_YEAR
 end_year = c.END_YEAR
+
+# Download the data already prepared
+data_dir = c.DATA_DIR
+if not os.path.exists(data_dir):
+    download_data()
 
 # Load dataframes
 station_df = f.load_good_stations_df()
