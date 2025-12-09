@@ -1,5 +1,8 @@
-RAW_DATA_PATH = "data/raw"
-PROCESSED_DATA_PATH = "data/processed"
+import os
+
+DATA_DIR = "data"
+RAW_DATA_PATH = os.path.join(DATA_DIR, "raw")
+PROCESSED_DATA_PATH = os.path.join(DATA_DIR, "processed")
 CITY_DF_FILENAME = "city_df.csv"
 CITY_FILENAME = "communes-france-2025.csv.gz"
 CITY_WITH_CLOSEST_STATIONS_DF_FILENAME = "city_with_closest_stations_df.csv"

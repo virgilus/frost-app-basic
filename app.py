@@ -14,8 +14,7 @@ start_year = c.START_YEAR
 end_year = c.END_YEAR
 
 # Download the data already prepared
-data_dir = c.DATA_DIR
-if not os.path.exists(data_dir):
+if not os.path.exists(c.DATA_DIR):
     download_data()
 
 # Load dataframes
